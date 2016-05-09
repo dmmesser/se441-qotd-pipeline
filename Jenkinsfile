@@ -6,5 +6,8 @@ node {
 
 	def gradleHome = tool 'Gradle 2.11'
 	sh "${gradleHome}/2.11/bin/gradle assemble uploadArchives"
+	sh "${gradleHome}/2.11/bin/gradle assemble test"
+	sh "${gradleHome}/2.11/bin/gradle assemble sonarqube"
+
 
 }
